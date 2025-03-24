@@ -1,0 +1,33 @@
+depuis wikipidia : Identité remarquable
+
+Démonstration par l'algèbre:
+===========================
+Les trois identités remarquables du second degré sont :
+(a+b)^2 = a^2 + 2ab + b^2
+(a-b)^2 = a^2 - 2ab + b^2
+(a+b)(a-b) = a^2 - b^2
+
+L'algèbre permet encore de démontrer ces formules.
+Calculons (a - b)^2. La distributivité montre que :
+(a-b)^2 = (a-b)(a-b) = a(a-b) - b(a-b) = a^2 - ab - ba + b^2 = a^2 - 2ab + b^2
+
+On démontre de même la troisième identité remarquable :
+(a+b)(a-b) = a(a-b) + b(a-b) = a^2 - ab + ba - b^2 =  a^2 - b^2
+
+---------------------------------------------------------------
+Identité remarquable et géométrie:
+=================================
+Ces identités remarquables sont connues depuis les Babyloniens3. 
+Il est possible qu'ils se soient rendu compte de ces égalités à l'aide de raisonnements géométriques. 
+Il existe une méthode simple pour trouver la formule suivante:
+(a+b)^2 = a^2 + 2ab + b^2
+
+La figure (image) "Binom_square_Identite_remarquable.png" représente un carré. On suppose que 
+la longueur du côté du carré rose est égale à a et celle du carré bleu à b. 
+L'aire du grand carré est égale à (a + b)^2.
+Il existe une autre manière d'exprimer cette aire : 
+elle est la somme des aires des zones rose, bleue et des deux zones jaunes. 
+L'aire rose est égale à a2 car c'est un carré de côté a, 
+l'aire bleue est égale à b2, 
+et chacune des deux aires jaunes est égale à ab car c'est un rectangle de côtés a et b. 
+On obtient bien la formule annoncée.

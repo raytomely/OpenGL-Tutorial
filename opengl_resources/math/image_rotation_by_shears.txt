@@ -1,0 +1,82 @@
+http://datagenetics.com/blog/august32013/index.html
+https://www.codeproject.com/Articles/202/High-quality-image-rotation-rotate-by-shear
+
+
+Want to see some magic?:
+=======================
+
+Do you still use Microsoft Paint, 
+or some other under-powered paint package that 
+does not allow you to rotate an image by an arbitrary angle? 
+Ever been frustrated by this?
+
+
+The (built in) rotation option only allows you to rotate the image in multiples of 90°
+Those are the easy options to code.
+What if you wanted to rotate your image by, say, 27°?
+
+
+Well, thankfully, Microsoft equipped paintbrush with a couple of useful functions, 
+these are resize and shear (which they call skew)
+
+We can apply the three stage shear principle/concept we have just learned. 
+The two basic tools provided to us in the paint package enable us to produce an arbitray rotation!
+
+(The math is modfied slightly because paint applies the actions to the selected region, not a centroid, 
+but it's the same thing we are doing.)
+
+
+
+Step #1 Horizontal Shear:
+========================
+Select the image you want to rotate. 
+The image is going to be rotated around the center of the selection. 
+Make sure you leave sufficient space around the image for expansion as we distort the image.
+
+With the region selected, click on the Resize button on the Painbrush toolbar and enter
+in the desired skew (in degrees) in the horizontal plane.
+
+In the case, I've entered 27°
+
+
+
+Step #2 Vertical Scale:
+======================
+Now we need to scale in the vertical plane. Without adjusting the selected region, 
+click on the Resize button again.
+
+NOTE - We only want to scale in the vertical plane,
+so make sure to uncheck the box 'Maintain aspect ratio'
+
+The exact value to enter into this box is based on a calculaton. 
+You'll need to use the forumla below to get a scaling factor, and round it to the nearest number:
+
+1 / ( cos(rotation) ^ 2 )
+
+In my case, for 27° the answer is 1.2596, so I've rounded this to 126% percentage scaling.
+
+(Make sure your calculator is set into Degrees and in Scientific mode.
+Type in your rotation, hit the cos button, then x2 then 1/x button).
+
+
+
+Step #3 Vertical Shear:
+======================
+This one is easy. Click the Resize button once more and skew the image a negative number of degrees in the vertical plane.
+
+
+
+Step #4 Global Resize:
+=====================
+One last step. We need to shrink the image back to the correct size.
+
+To calculate the scaling factor we need to take the cos of the rotation angle.
+
+For 27°, cos(27) = 0.8910 so we use this as the scale factor (rounded to 89%).
+
+NOTE - This time make sure the 'Maintain aspect ratio' box is checked, 
+as we need to apply this to both axis.
+
+
+And we're done …
+

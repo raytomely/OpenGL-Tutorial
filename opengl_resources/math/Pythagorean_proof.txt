@@ -1,0 +1,17 @@
+Pour un triangle rectangle donné, 
+il est possible de l’inscrire en quatre exemplaires 
+dans les coins d’un carré dont le côté a pour 
+longueur la somme des longueurs des côtés de l'angle droit. Les quatre hypoténuses forment alors un carré, par égalité de longueur et sachant que chacun de ses angles est supplémentaire des deux angles aigus du triangle.
+
+Avec les notations usuelles, l’aire totale du grand carré 
+vaut donc (a + b)^2 et l’aire du carré intérieur vaut c^2. 
+La différence est constituée par quatre triangles d’aire ab/2 chacun.
+
+La relation algébrique entre ces aires s’écrit alors:
+(par "Binom_square_Identite_remarquable")
+
+(a + b)^2 = 4 (ab/2) + c^2, c’est-à-dire: a^2 + 2ab + b^2 = 2ab + c^2, ce qui revient à: a^2 + b^2 = c^2.
+
+Aucun calcul algébrique n'est cependant nécessaire
+on peut conclure par un réarrangement 
+des quatre triangles rectangles dans le grand carré.

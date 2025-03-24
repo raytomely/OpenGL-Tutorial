@@ -1,0 +1,17 @@
+rad=deg * math.pi /180 
+deg=rad*180/pi
+
+Python includes two functions in the math package; radians converts degrees to radians, 
+and degrees converts radians to degrees
+
+Note that all of the trig functions convert between an angle and the ratio of two sides of a triangle.
+cos, sin, and tan take an angle in radians as input and return the ratio; 
+acos, asin, and atan take a ratio as input and return an angle in radians.
+You only convert the angles, never the ratios.
+
+You can simply convert your radian result to degree by using
+math.degrees and rounding appropriately to the required decimal places
+for example
+
+>>> round(math.degrees(math.asin(0.5)),2)
+30.0
