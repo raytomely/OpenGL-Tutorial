@@ -1,0 +1,20 @@
+Rotation along X:
+y' = y*cos(a) - z*sin(a)
+z' = y*sin(a) + z*cos(a)
+x' = x
+
+Rotation along Y:
+z' = z*cos(a) - x*sin(a)
+x' = z*sin(a) + x*cos(a)
+y' = y
+
+Rotation along Z:
+x' = x*cos(a) - y*sin(a)
+y' = x*sin(a) + y*cos(a)
+z' = z
+
+
+3D Perspective Projection
+x' = x * fov / (z + viewer_distance) + half_screen_width
+y' = -y * fov / (z + viewer_distance) + half_screen_height
+z' -> for now, z is useless

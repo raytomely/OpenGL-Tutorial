@@ -1,0 +1,46 @@
+from searching "sonic slope collision detection" on google image
+
+45° Slopes in a Tile based 2D platformer  
+on  gamedev.stackexchange.com
+
+those formulas are similar to : " the law of similar triangles "
+
+From what I understand reading your question, 
+you want to calculate the correct Y position, given a  X position of the player. 
+This is rather trivial. Have a look at this image:(45°_slpoes.png)
+
+Assuming your slope-tile is at a given position x,y (origin is bottom left as in the image). 
+You have the player position x1 and the width and the height of the sloped tile (u, v). 
+x, y and x1 are world coordinates
+
+Given these parameters, your players Y-position (y1) would be:
+
+y1 = y + (x1 - x) * (v / u)
+
+If you're only dealing with 45 degree angles, then it gets even simpler:
+
+y1 = y + (x1 - x)
+
+If the slope is the other way round, it's:
+
+y1 = y + (v - (x1 - x))
+
+there is also the formula: " y = mx + b "  Grade 9 algebra.
+
+y = mx + b, 
+
+where y is the coordinate calculated, 
+m is the slope (-1 for down at 45 degrees, 1 for up at 45 degrees), 
+and b is the y-intercept -- the y-coordinate where x=0
+
+This allows you slightly more flexibility; 
+you can change m to calculate a different slope other than 45-degrees. 
+For example, an m of pi/3 gives you a slope of 30 degrees.
+
+
+if you want to discover the hints behind sonic physics:
+
+http://info.sonicretro.org/Sonic_Physics_Guide
+
+http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/
+
